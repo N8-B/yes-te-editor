@@ -1,0 +1,65 @@
+// Article //
+
+.article-body
+  padding: 0 $margin*1.6
+  +media($mobile)
+    padding-top: 0
+  +media($mobile-landscape)
+    padding-top: 0
+  +media($tablet)
+    //font-size: $base-font-size*1.25
+    padding: $margin $margin*3.5
+  +media($tablet-landscape-size)
+    //font-size: $base-font-size*1.5
+    padding: $margin $margin*6.5
+  +media($desktop)
+    padding: $margin*3 $margin*6.5
+    //font-size: $base-font-size*1.25
+  +media($largedesktop)
+    padding: $margin*3 $margin*6.5
+  
+  h1, h2, h3, h4, h5, h6
+    margin-bottom: 0
+    color: $articleTitle-color
+    margin-top: $margin/2
+    line-height: 1.25
+
+  h3
+    //+media($tablet)
+      font-size: $h3-font-size
+  
+  a
+    border-bottom: 1px solid rgba($link-color, 0.35)
+    +transition(all 0.5s ease-in-out)
+    &:hover
+      +media($desktop)
+        background-color: rgba($link-color, 0.18)
+        border-bottom: 1px solid rgba($link-color, 1)
+      +media($largedesktop)
+        background-color: rgba($link-color, 0.18)
+        border-bottom: 1px solid rgba($link-color, 1)
+
+  .asset-container img
+    display: block
+    
+  figure, .asset-container figure
+    position: relative
+    max-width: 100%
+    margin: $margin*1.5 0
+    height: auto
+    
+  figcaption, .asset-container figcaption
+    font-size: $base-font-size/1.25
+    line-height: $base-line-height*0.875
+    color: $text-color
+    border-bottom: 1px solid rgba($text-color, 0.5)
+    padding-top: $margin/1.25
+    padding-bottom: $margin/1.25
+    
+.article-body > figcaption, .asset-container figcaption
+  font-size: $base-font-size/1.25
+  line-height: $base-line-height*0.875
+  color: $text-color
+  border-bottom: 1px solid rgba($text-color, 0.5)
+  padding-top: $margin/1.25
+  padding-bottom: $margin/1.25

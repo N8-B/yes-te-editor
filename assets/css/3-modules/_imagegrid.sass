@@ -1,0 +1,48 @@
+.image-grid-half
+  +outer-container
+  margin: $margin*2 0
+  
+  img
+    height: auto
+    max-width: 100%
+    +media($mobile)  
+      +fill-parent
+    +media($mobile-landscape)
+      +fill-parent
+    +media($tablet)
+      +span-columns(6)
+      +omega(2n)
+    +media($tablet-landscape)
+      +span-columns(6)
+      +omega(2n)
+    +media($desktop)
+      +span-columns(6)
+      +omega(2n)
+    +media($largedesktop)
+      +span-columns(6)
+      +omega(2n)
+
+      
+.image-grid-third
+  +outer-container
+  margin: $margin*2 0
+
+  img
+    height: auto
+    max-width: 100%
+    +media($mobile)  
+      +fill-parent
+    +media($mobile-landscape)
+      +fill-parent
+    +media($tablet)
+      +span-columns(4)
+      +omega(3n)
+    +media($tablet-landscape)
+      +span-columns(4)
+      +omega(3n)
+    +media($desktop)
+      +span-columns(4)
+      +omega(3n)
+    +media($largedesktop)
+      +span-columns(4)
+      +omega(3n)

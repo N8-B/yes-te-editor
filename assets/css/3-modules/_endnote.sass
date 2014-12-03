@@ -1,0 +1,75 @@
+/*Use endnote for additional info such as exercises, further reading, external links etc
+
+/*Light background
+.endnote
+  margin: $margin*2 0 $margin 0
+  background-color: lighten($endnote-color, 8%)
+  padding: $margin $margin 0 $margin
+  font-size: $base-font-size
+  line-height: $base-line-height
+  //+media($tablet)
+    font-size: $base-font-size*1.25
+  color: $text-color
+  
+  hr
+    border: 1px solid darken($endnote-color, 8%)
+    border-radius: 5px
+  
+  h1:nth-child(1), h2:nth-child(1), h3:nth-child(1), h4:nth-child(1), h5:nth-child(1), h6:nth-child(1)
+    margin-top: 0
+  
+  h1, h2, h3, h4, h5, h6
+    margin-bottom: 0px
+    text-transform: uppercase
+    margin-top: $margin
+    color: $black
+ 
+  a
+    color: $link-color
+    border-bottom: 1px solid rgba($link-color, 0.35)
+    +transition(all 0.5s ease-in-out)
+    &:hover
+      +media($desktop)
+        background-color: darken($endnote-color, 3%)
+        border-bottom: 1px solid rgba($link-color, 1)
+      +media($largedesktop)
+        background-color: darken($endnote-color, 3%)
+        border-bottom: 1px solid rgba($link-color, 1)
+        
+    
+/*Dark background
+//.endnote
+  +span-columns(12)
+  margin: $margin 0
+  background-color: $endnoteDark-color
+  color: $ivory
+  padding: $margin $margin 0 $margin
+  font-size: $base-font-size
+  //+media($tablet)
+    font-size: $base-font-size*1.25
+  line-height: $base-line-height
+  
+  hr
+    border: 1px solid rgba($text-color, 0.3)
+    border-radius: 5px
+  
+  h1:nth-child(1), h2:nth-child(1), h3:nth-child(1), h4:nth-child(1), h5:nth-child(1), h6:nth-child(1)
+    margin-top: 0
+  
+  h1, h2, h3, h4, h5, h6
+    color: $white
+    margin-bottom: 0px
+    text-transform: uppercase
+    margin-top: $margin
+  
+  a
+    color: $goldMedium
+    border-bottom: 1px solid rgba($goldMedium, 0.75)
+    +transition(all 0.5s ease-in-out)
+    &:hover    
+      +media($desktop)
+        background-color: darken($endnoteDark-color, 8%)
+        border-bottom: 1px solid rgba($goldMedium, 1)
+      +media($largedesktop)
+        background-color: darken($endnoteDark-color, 8%)
+        border-bottom: 1px solid rgba($goldMedium, 1)

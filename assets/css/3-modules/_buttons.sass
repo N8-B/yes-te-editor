@@ -1,0 +1,122 @@
+a.btn
+  display: block
+  position: relative
+  vertical-align: top
+  width: 100%
+  min-height: $margin*2
+  +margin($margin*2.5 $margin $margin 0)
+  padding: $margin/2 $margin
+  font-family: "Oswald"
+  font-size: $h6-font-size
+  font-weight: 700
+  text-align: center
+  cursor: pointer
+  text-transform: uppercase
+  border-bottom: none
+  +border-top-radius(5px)
+  +border-bottom-radius(5px)
+  color: lighten($grayDark, 25%)
+  background-color: rgba($grayDark, 0.15)
+  transition: all 0.5s ease
+    
+  &-gray
+    color: lighten($grayDark, 25%)
+    background-color: rgba($grayDark, 0.15)
+  
+    &:hover
+      outline: none
+      background-color: rgba($grayDark, 0.20)
+      border-bottom: none
+
+    &:active
+      outline: none
+      background-color: rgba($grayDark, 0.25)
+      border-bottom: none
+      
+  &-darkGray
+    color: lighten($grayDark, 90%)
+    background-color: rgba($grayDark, 0.70)
+
+    &:hover
+      outline: none
+      background-color: rgba($grayDark, 0.80)
+      border-bottom: none
+
+    &:active
+      outline: none
+      background-color: rgba($grayDark, 0.90)
+      border-bottom: none
+
+  &-red
+    color: $white
+    background-color: rgba($red, 0.80)
+
+    &:hover
+      outline: none
+      background-color: rgba($red, 0.90)
+      border-bottom: none
+
+    &:active
+      outline: none
+      background-color: rgba($red, 1)
+      border-bottom: none
+  
+  &-blue
+    color: $white
+    background-color: rgba($blue, 0.80)
+
+    &:hover
+      outline: none
+      background-color: rgba($blue, 0.90)
+      border-bottom: none
+
+    &:active
+      outline: none
+      background-color: rgba($blue, 1)
+      border-bottom: none
+      
+  &-yellow
+    color: rgba($grayDark, 0.80)
+    background-color: $yellowMedium
+
+    &:hover
+      outline: none
+      background-color: darken($yellowMedium, 8%)
+      border-bottom: none
+
+    &:active
+      outline: none
+      background-color: darken($yellowMedium, 12%)
+      border-bottom: none
+
+a.btn-outline-darkGray
+  display: block
+  position: relative
+  vertical-align: top
+  width: 100%
+  min-height: $margin*2
+  +margin($margin $margin $margin 0)
+  padding: $margin/2 $margin
+  font-family: "Oswald"
+  font-size: $h6-font-size
+  font-weight: 700
+  color: rgba($grayDark, 0.70)
+  text-align: center
+  border: 2px solid rgba($grayDark, 0.70)
+  cursor: pointer
+  text-transform: uppercase
+  +border-top-radius(5px)
+  +border-bottom-radius(5px)
+  
+  &:hover
+    border: 2px solid rgba($grayDark, 0.30)
+    color: $white
+    outline: none
+    background-color: rgba($grayDark, 0.50)
+          
+  &:active
+    border: 2px solid rgba($grayDark, 0.30)
+    color: $white
+    outline: none
+    background-color: rgba($grayDark, 0.50)
+      

@@ -1,0 +1,136 @@
+.footer
+  padding: $margin*2 0
+  border-top: 3px solid rgba($black, 0.2)
+  border-bottom: 3px solid rgba($black, 0.2)
+  margin: $margin $margin*0.6 $margin*3 $margin*0.6
+    
+  .author-img, img
+    border-width: 5px
+    border-color: $black
+    //background-blend-mode: multiply
+    float: none
+    margin: 0 auto
+    +media($mobile)
+      max-width: 90px
+      +border-top-radius(45px)
+      +border-bottom-radius(45px)
+    +media($mobile-landscape)  
+      max-width: 90px
+      +border-top-radius(45px)
+      +border-bottom-radius(45px)
+    +media($tablet)
+      float: right
+      max-width: 120px
+      +border-top-radius(60px)
+      +border-bottom-radius(60px)
+    +media($tablet-landscape)
+      float: right
+      max-width: 120px
+      +border-top-radius(60px)
+      +border-bottom-radius(60px)
+    +media($desktop)
+      float: right
+      max-width: 120px
+      +border-top-radius(60px)
+      +border-bottom-radius(60px)
+    +media($largedesktop)
+      float: right
+      max-width: 120px
+      +border-top-radius(60px)
+      +border-bottom-radius(60px)
+      margin: 0 0 $margin/4 $margin*0.9
+      
+  .author-name
+    font-family: "Oswald"
+    margin: 0
+    color: $black
+    line-height: $base-line-height
+    font-size: $h5-font-size*0.9
+    +media($mobile)
+      text-align: center
+      margin-top: $margin
+      line-height: $base-line-height
+      font-size: $h5-font-size*0.9
+    +media($mobile-landscape)
+      text-align: center
+      margin-top: $margin
+      line-height: $base-line-height
+      font-size: $h5-font-size*0.9
+    +media($tablet)
+      line-height: $base-line-height
+      font-size: $h5-font-size
+    +media($tablet-landscape)
+      line-height: $base-line-height
+      font-size: $h5-font-size
+    +media($desktop)
+      line-height: $base-line-height
+      font-size: $h5-font-size
+    +media($largedesktop)
+      line-height: $base-line-height
+      font-size: $h5-font-size
+
+  .author-bio
+    +media($mobile)
+      text-align: center
+      line-height: $base-line-height
+      font-size: $base-font-size*0.9
+    +media($mobile-landscape)
+      text-align: center
+      line-height: $base-line-height
+      font-size: $base-font-size*0.9
+    +media($tablet)
+      line-height: $base-line-height
+      font-size: $base-font-size
+    +media($tablet-landscape)
+      line-height: $base-line-height
+      font-size: $base-font-size
+    +media($desktop)
+      line-height: $base-line-height
+      font-size: $base-font-size
+    +media($largedesktop)
+      line-height: $base-line-height
+      font-size: $base-font-size
+      
+  p.author-bio
+    +media($mobile)
+      line-height: $base-line-height
+      font-size: $base-font-size*0.9
+    +media($mobile-landscape)
+      line-height: $base-line-height
+      font-size: $base-font-size*0.9
+    +media($tablet)
+      line-height: $base-line-height
+      font-size: $base-font-size
+    +media($tablet-landscape)
+      line-height: $base-line-height
+      font-size: $base-font-size
+    +media($desktop)
+      line-height: $base-line-height
+      font-size: $base-font-size
+    +media($largedesktop)
+      line-height: $base-line-height
+      font-size: $base-font-size
+    
+  a
+    border-bottom: 1px solid rgba($link-color, 0.35)
+    +transition(all 0.5s ease-in-out)
+    &:hover
+      +media($desktop)
+        border-bottom: 1px solid rgba($link-color, 1)
+        background-color: rgba($link-color, 0.18)
+      +media($largedesktop)
+        border-bottom: 1px solid rgba($link-color, 1)
+        background-color: rgba($link-color, 0.18)
+    
+  .author-social a
+    border-bottom: 0
+    &:hover
+      border-bottom: 0
+      background-color: $footer-bg-color
+            
+  h5.author-name
+    margin-bottom: 0 !important
+    
+#author-block
+  +media($tablet-landscape)
+    padding: 0 $margin

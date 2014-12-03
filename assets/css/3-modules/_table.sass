@@ -1,0 +1,54 @@
+table
+  font-family: "Roboto"
+  line-height: $base-line-height*0.9
+  -webkit-font-smoothing: antialiased
+  border: $table-border
+  border-collapse: separate
+  border-spacing: 0
+  border-radius: $base-border-radius
+  margin: $margin*1.25 0 $margin 0
+  
+  tbody
+    background-color: $table-background
+    vertical-align: top
+
+    tr:nth-child(even)
+      background-color: $bg-color
+
+
+  thead:first-of-type
+    tr:first-child > th:first-child
+      border-top-left-radius: $base-border-radius
+
+    tr:first-child > th:last-child
+      border-top-right-radius: $base-border-radius
+
+  tbody:last-child
+    tr:last-child > td:first-child
+      border-bottom-left-radius: $base-border-radius
+
+    tr:last-child > td:last-child
+      border-bottom-right-radius: $base-border-radius
+
+  thead
+    th
+      vertical-align: top
+      background-color: $table-header-color
+      padding: $table-padding
+      border-left: 2px solid lighten($table-header-color, 10%)
+      border-bottom: 0px
+      color: $table-headerText-color
+      &:first-child
+        border-left: 0
+    
+  tbody
+    background-color: $table-background
+
+    td
+      vertical-align: top
+      padding: $table-padding
+      border-left: 2px solid rgba($table-header-color, 0.5)
+      //border-top: 2px solid rgba($table-header-color, 0.1)
+      border-bottom: 0px
+      &:first-child
+        border-left: 0

@@ -1,0 +1,146 @@
+// Color Variables //
+
+$white:		       #ffffff
+$ivory:            #F6F6F8
+$beige:		       #E5E3D7
+$beigeAlt:	       #E0D9B5
+$beigeDark:	       #DDD5AE
+$grayDark:	       #1E1E1E	
+$grayMedium:       #DFE0DA
+$grayLight:        #EFF0EA
+$black:		       #111111 
+$blue:		       #417196
+$red:              #C0392B
+$redAlt:           #AD141E
+
+$duckEggBlueDark:     #8FBFBD
+$duckEggBlueMedium:   #B4D4D3
+$duckEggBlueLight:    #D1E5E4
+$greenDark:           #BFCE87
+$greenMedium:         #D2DCAA
+$greenLight:          #E0E7C4
+$goldDark:            #E2C635
+$goldMedium:          #EBD875
+$goldLight:           #EFE093
+$yellowDark:          #FFEA40
+$yellowMedium:        #FFF498
+$yellowLight:         #FFF8BB
+$orangeDark:          #FEB121
+$orangeMedium:        #FED281
+$orangeLight:         #FEE0A6
+$pinkDark:            #FF8989
+$pinkMedium:          #FFC6C6
+$pinkLight:           #FFDCDC
+
+$text-color:       lighten($grayDark, 18%)
+$accent-color:     $grayDark
+$bg-color:         $white
+$link-color:       $blue
+$selection-color:  $yellowMedium
+$blockquote-color: $redAlt
+$overlay-color:    $white
+$endnote-color:    $beigeAlt
+$endnoteDark-color:  $redAlt
+$chevron-bullet-color: $redAlt
+$numbered-bullet-color: rgba($grayMedium, 1)
+$numbered-bullet-text-color: darken($grayMedium, 50%)
+$numbered-bullet-border-color: darken($numbered-bullet-color, 15%)
+
+/* Article Titles Color Variables */
+$title-color: $black
+$subTitle-color: $black
+$articleTitle-color: $redAlt
+$articleType-color: $white
+
+/* Footer */
+$footer-bg-color: lighten($black, 90%) 
+
+/* Article Ordered and Unordered Color Variables */
+$orderedList-color: $redAlt
+$unorderedList-color: $redAlt
+
+/* Table Color Variables */
+$table-header-color: $beigeAlt
+$table-headerText-color: $text-color
+$table-border-color: rgba($table-header-color, 0.5)
+$table-border: 2px solid rgba($table-border-color, 0.5)
+$table-background: rgba($table-border-color, 0.3)
+$table-stripe-color: $table-header-color
+$table-padding: 0.5em
+
+// Typography Mixins and Variables //
+
+=headingFont
+  font-family: Oswald
+  font-weight: 700
+
+=headingFontAlt
+  font-family: RobotoCondensed
+  font-weight: 700
+    
+=subTitleFont
+  font-family: Oswald
+  font-weight: 700
+
+=subTitleFontAlt
+  font-family: RobotoCondensed
+  font-weight: 700
+
+=articleHeadingFont
+  font-family: Roboto
+  font-weight: 900
+
+=articleHeadingFontAlt
+  font-family: RobotoCondensed
+  font-weight: 700
+
+=bodyFontFamily
+  font-family: Roboto
+
+=captionFontFamily
+  font-family: Roboto
+
+/* pass font-weight in the mixin. Font-weight: 400 = normal; font-weight: 700 = bold. E.g. +bodyFont(400) */
+=bodyFont($bodyFontWeight)
+  font-family: Roboto
+  font-weight: $bodyFontWeight
+
+$tableFontFamily: Roboto
+    
+/* Font sizes */
+$base-font-size: 1em
+$line-height: 1.5
+$base-line-height: 1.5
+$header-line-height: 1.25
+$h1-font-size: $base-font-size * 2.25
+$h1-line-height: $h1-font-size
+$h2-font-size: $base-font-size * 2
+$h2-line-height: $h2-font-size
+$h3-font-size: $base-font-size * 1.75
+$h3-line-height: $h3-font-size
+$h4-font-size: $base-font-size * 1.50
+$h4-line-height: $h4-font-size
+$h5-font-size: $base-font-size * 1.25
+$h5-line-height: $h5-font-size
+$h6-font-size: $base-font-size
+$h6-line-height: $h6-font-size
+
+// Tables //
+$table-background-color: transparent
+$table-border-color: hsl(195, 7%, 89%)
+$table-stripe-color: hsl(185,15%,96%)
+$table-bg-hover-color: hsl(0,0%,85%)
+$table-head-background-color: $table-border-color
+$table-font-size: 90%
+$table-padding-size: $base-font-size / 2 $base-font-size
+
+// Layout //
+$margin: $base-font-size * 1.5
+
+// Vertical align anything! //
+=vertical-align
+  position: absolute
+  top: 50%
+  -webkit-transform: translateY(-50%)
+  -ms-transform: translateY(-50%)
+  transform: translateY(-50%)

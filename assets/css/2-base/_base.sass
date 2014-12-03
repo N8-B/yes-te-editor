@@ -1,0 +1,223 @@
+// Body Set-up //
+html, body
+  background: $bg-color
+  margin: 0
+  padding: 0
+  color: $text-color  
+  font-size: $base-font-size
+  +media($tablet-landscape)
+    font-size: $base-font-size*1.025
+    line-height: $base-line-height*1.025
+  +media($desktop)
+    font-size: $base-font-size*1.05
+    line-height: $base-line-height*1.025
+  +media($largedesktop)
+    font-size: $base-font-size*1.075
+    line-height: $base-line-height*1.025
+  line-height: $line-height
+  background-color: $bg-color
+  -webkit-font-smoothing: antialiased
+  -webkit-text-size-adjust: 100%
+  height: 100%
+  width: 100%
+
+.clearfix:after
+  visibility: hidden
+  display: block
+  font-size: 0
+  content: " "
+  clear: both
+  height: 0 
+
+
+//	Typography Set-up //
+
+/* Headers */
+h1, h2, h3, h4, h5, h6	
+  margin:
+    top: $margin * 2
+    bottom: $margin
+  font-family: "Oswald"
+  font-weight: 700
+
+h1
+  font-size: $h1-font-size
+  line-height: $h1-line-height
+
+h2
+  font-size: $h2-font-size
+  line-height: $h2-line-height
+
+h3
+  font-size: $h3-font-size
+  line-height: $h3-line-height
+
+h4
+  font-size: $h4-font-size
+  line-height: $h4-line-height	
+
+h5
+  font-size: $h5-font-size
+  line-height: $h5-line-height
+
+h6
+  font-size: $h6-font-size
+  line-height: $h6-line-height
+
+/* Body Typography */
+.article-body, figcaption, .ad-block, .endnote, .footer, .footnote
+  font-family: "Roboto"
+  font-weight: 400
+
+.pullquote, blockquote
+  font-family: "Oswald"
+  font-weight: 700
+
+p
+  font-family: "Roboto"
+  margin-bottom: $margin
+
+
+em
+  font-style: italic
+
+strong
+  font-weight: bold
+
+hr
+  border: solid lighten($grayDark, 75%)
+  border-width: 3px 0 0
+  clear: both
+  margin: 10px 0 30px
+  height: 0
+
+
+// Links
+
+a, a:hover, a:active, a:visited, a:focus
+  color: $link-color
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  text-decoration: none
+  outline: 0 
+
+a:active
+  color: shade($link-color, 20%)
+
+    
+// Selection colors (easy to forget)
+
+::selection
+  background: $selection-color
+  
+::-moz-selection
+  background: $selection-color
+  
+img::selection
+  background: transparent
+  
+img::-moz-selection
+  background: transparent
+  
+body
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+
+
+// Lists //
+
+ul
+  list-style-type: none
+  list-style-position: inside
+  li:before
+    content: "\00BB \0020"
+    font-weight: 700
+    font-family: "Roboto"
+    font-size: $h4-font-size
+    color: $chevron-bullet-color
+  
+ul ul
+  list-style-type: disc
+  list-style-position: inside
+  margin-left: 1em
+  li:before
+    content: ""
+    
+ol
+  counter-reset: li
+  margin-left: 0
+  paddin-left: 0
+
+ol > li
+  position: relative /* Create a positioning context */
+  margin: 1em 0 6px 2em /* Give each list item a left margin to make room for the numbers */
+  padding: 2px 8px /* Add some spacing around the content */
+  list-style: none /* Disable the normal item numbering */
+  background: $bg-color
+  
+ol > li:before
+  content: counter(li) /* Use the counter as content */
+  counter-increment: li /* Increment the counter by 1 */
+  /* Position and style the number */
+  position: absolute
+  top: -2px
+  left: -2em
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+  width: 2em
+  /* Some space between the number and the content in browsers that support
+       generated content but not positioning it (Camino 2 is one example) */
+  margin-right: 8px
+  padding: 2px
+  color: $numbered-bullet-text-color
+  border: 2px solid $numbered-bullet-border-color
+  background-color: $numbered-bullet-color
+  +border-top-radius(2em)
+  +border-bottom-radius(2em)
+  font-weight: 700
+  font-family: "Oswald"
+  text-align: center
+    
+dt
+  font-weight: 400
+
+
+// Basic Structure and Assets Set-up //
+
+.container
+  +outer-container
+  //padding: $margin
+  +media($mobile)
+    padding: 0 $margin 0 $margin
+  +media($mobile-landscape)
+    padding: 0 $margin 0 $margin
+  +media($tablet)
+    padding: 0 $margin*3 0 $margin*3
+  +media($tablet-landscape)  
+    padding: 0 $margin*6 0 $margin*6
+  +media($desktop)
+    padding: 0 $margin*6 0 $margin*6
+  +media($largedesktop)
+    padding: 0 $margin*6 0 $margin*6
+
+  .header, .article-body, .ad-block, .endnote, .footer, .asset-container, .article-body .asset-container, iframe, img
+    max-width: 100%
+  
+  .header img, .article-body img, .endnote img, .footer img, .asset-container img, .asset-container figure img, .ad-block img, .featured-img img, .featured-img
+    max-width: 100%
+    height: auto
+  
+  .asset-container figure, figure
+    max-width: 100%
+    height: auto
+    margin: $margin*2 0
+
+  .featured-img, img
+    margin-left: auto
+    margin-right: auto
+    
+  .asset-container
+    margin-top: $margin
+    margin-bottom: $margin
+  
+  audio
+    max-width: 100% 

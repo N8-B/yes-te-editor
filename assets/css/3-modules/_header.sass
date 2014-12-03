@@ -1,0 +1,203 @@
+// Header //
+
+/* Title above Featured Image */
+.featured-img
+  padding: 0 0 0 0
+  +media($tablet)
+    padding: 0
+  +media($tablet-landscape)
+    max-width: 1024px
+  +media($desktop)
+    padding-right: $margin*2
+    padding-left: $margin*2
+  +media($largedesktop)
+    padding-right: $margin*2
+    padding-left: $margin*2
+  
+  figure
+    padding-bottom: 0
+    margin:
+      top: 0
+      bottom: $margin
+  
+  figcaption
+    font-size: $base-font-size/1.25
+    line-height: $base-line-height*0.875
+    color: $text-color
+    border-bottom: 1px solid rgba($text-color, 0.5)
+    padding-top: $margin/2
+    padding-bottom: $margin/1.25
+    +media($mobile)
+      padding-left: $margin
+      padding-right: $margin
+    +media($mobile-landscape)
+      padding-left: $margin
+      padding-right: $margin
+    +media($tablet)
+      padding-left: $margin
+      padding-right: $margin
+    +media($tablet-landscape)
+      padding-left: $margin
+      padding-right: $margin
+      //max-width: 1024px
+    +media($desktop)
+      padding-right: 0
+      padding-left: 0
+    +media($largedesktop)
+      padding-right: 0
+      padding-left: 0
+
+.article-type
+  display: inline-block
+  float: left
+  color: $articleType-color
+  word-spacing: 0.125em
+  text-transform: uppercase
+  font-size: $h6-font-size/1.4
+  background: $black
+  padding: 8px
+  margin: 0 0
+  +media($mobile-landscape)
+    margin-top: 0
+  +media($tablet)
+    font-size: $h6-font-size
+    margin-top: 0
+  +media($tablet-landscape)
+    font-size: $h6-font-size
+    margin-top: 0
+  +media($desktop)
+    font-size: $h6-font-size
+    margin-top: 0
+  +media($largedesktop)
+    font-size: $h6-font-size
+    margin-top: 0
+    
+.header
+  //On index.html file add the template tag for the featured image source to the background-image url in a style tag above the CSS tamplate block. //
+  background-image: url("/assets/demo/yes17.jpg")
+  background-repeat: no-repeat, no-repeat
+  background-position: top, top
+  //background-size: contain
+  background-attachment: fixed
+  color: $title-color
+  //background: $white
+  +media($mobile)
+    margin-bottom: $margin*2
+  +media($mobile-landscape)
+    margin-bottom: $margin*2
+  +media($tablet)
+    margin-bottom: $margin*2
+  +media($tablet-landscape)
+    padding: 0 $margin
+    margin-bottom: $margin*2
+  +media($desktop)
+    //padding: 0 $margin*2
+  +media($largedesktop)
+    //padding: 0 $margin*2
+
+  img
+    max-width: 100%
+    height: auto
+        
+  .article-titles
+    +span-columns(12)
+    margin-bottom: 0
+    margin-top: $margin*17.4
+    +media($mobile)
+      margin-bottom: 0
+    +media($mobile-landscape)
+      margin-bottom: 0
+    +media($tablet)
+      margin-bottom: 0
+    +media($tablet-landscape)
+      margin-top: $margin*16.5
+      margin-bottom: 0
+    +media($desktop)
+      margin-top: $margin*16.75
+      margin-bottom: 0
+    +media($largedesktop)
+      margin-top: $margin*16
+      margin-bottom: 0
+    
+    .article-title
+      padding: 15px 15px 0 15px
+      background: $white
+      color: $articleTitle-color
+      margin-bottom: -1px
+      font-size: $h1-font-size
+      line-height: $line-height/1.4
+      text-transform: uppercase
+      word-spacing: 0.125em
+      +media($mobile)
+        margin-top: 0
+      +media($mobile-landscape)
+        margin-top: 0
+      +media($tablet)
+        margin-top: 0
+        font-size: $h1-font-size
+      +media($tablet-landscape)
+        margin-top: 0
+        font-size: $h1-font-size
+      +media($desktop)
+        margin-top: 0
+        font-size: $h1-font-size
+      +media($largedesktop)
+        margin-top: 0
+        font-size: $h1-font-size
+          
+    .article-subtitle
+      padding: 0 15px
+      background: $white
+      text-transform: uppercase
+      margin-top: 0
+      font-weight: 300
+      font-size: $h3-font-size
+      line-height: 1.25
+      color: $subTitle-color
+      +media($mobile)
+        margin-bottom: -1px
+      +media($mobile-landscape)
+        margin-bottom: -1px
+      +media($tablet)
+        font-size: $h3-font-size
+        margin-bottom: -1px
+      +media($tablet-landscape)
+        font-size: $h3-font-size
+        margin-bottom: -1px
+      +media($desktop)
+        font-size: $h3-font-size
+        margin-bottom: 0
+      +media($largedesktop)
+        font-size: $h3-font-size
+        margin-bottom: 0
+
+    .author-name
+      color: $subTitle-color
+      text-decoration: none
+      text-transform: uppercase
+      font-size: $base-font-size
+      word-spacing: 0.125em
+      +media($tablet)
+        font-size: $base-font-size*1.2
+      +media($tablet-landscape)
+        font-size: $base-font-size*1.25
+      +media($desktop)
+        font-size: $base-font-size*1.25
+      +media($largedesktop)
+        font-size: $base-font-size*1.25
+
+    span
+      color: $subTitle-color
+
+    a
+      color: darken($white, 10%)
+        
+header.container
+  +media($desktop)
+    padding: 0 $margin*2
+    margin-right: auto
+    margin-left: auto
+  +media($largedesktop)
+    padding: 0 $margin*3
+    margin-right: auto
+    margin-left: auto

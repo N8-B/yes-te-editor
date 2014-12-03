@@ -1,0 +1,23 @@
+@import 'neat/neat-helpers'
+
+// Neat Overrides
+// $column: 90px;
+// $gutter: 30px;
+// $grid-columns: 12;
+$max-width: em(960)
+
+// Neat Breakpoints
+$mobile-size: 320px
+$mobile-landscape-size: 568px
+$tablet-size: 768px
+$tablet-landscape-size: 1024px
+$desktop-size: 1088px
+$largedesktop-size: 1500px
+
+// Bourbon Neat Breakpoints
+$mobile: new-breakpoint(min-width em(1px) max-width $mobile-size)
+$mobile-landscape: new-breakpoint(min-width ($mobile-size + 1) max-width $mobile-landscape-size)
+$tablet: new-breakpoint(min-width ($mobile-landscape-size + 1) max-width $tablet-size)
+$tablet-landscape: new-breakpoint(min-width ($tablet-size + 1) max-width $tablet-landscape-size)
+$desktop: new-breakpoint(min-width ($tablet-landscape-size + 1) max-width $largedesktop-size)
+$largedesktop: new-breakpoint(min-width ($largedesktop-size+1))
